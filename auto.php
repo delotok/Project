@@ -1,4 +1,4 @@
-#Script Recoder By X-Mr.R4h1M
+#Script Recoder By LeeProject
 #PERINGATAN EDIT SEDIKIT BAKAL ADA YANG ERROR :)
 
 <?php
@@ -73,7 +73,7 @@ function call($addr) {
         $res['message'] = $claim;
     }elseif(preg_match("/Only one account is allowed/", $body)){
        $res['status'] = false;
-        $res['message'] = "wkkwkw di band ip mu bro!"; 
+        $res['message'] = "Ip di Banned.. Kamu kurang Tamvan!"; 
     }else{
         $res['status'] = false;
         $res['message'] = $claim;
@@ -82,11 +82,11 @@ function call($addr) {
 }
 
 $CY="\e[36m"; $GR="\e[2;32m"; $OG="\e[92m"; $WH="\e[37m"; $RD="\e[31m"; $YL="\e[33m"; $BF="\e[34m"; $DF="\e[39m"; $OR="\e[33m"; $PP="\e[35m"; $B="\e[1m"; $CC="\e[0m";
-echo "Isi Wallet BTC Mu Goblok : ";
+echo "Masukin Wallet BTC Mu : ";
 $btc = trim(fgets(STDIN));
 //if ($cookies == false) exit($time . "No such file!");
 for($i=0; $i<100; $i++) {
-    echo "[" . date("H:i:s") . "] Sedang Mengklaim Jadi Tunggu...\n";
+    echo "[" . date("H:i:s") . "] Berusaha Claim Mohon Sabar...\n";
     $claim = call($btc);
     //print_r($claim);
     //$response = @json_decode($claim, 1);
@@ -94,13 +94,13 @@ for($i=0; $i<100; $i++) {
         echo "[" . date("H:i:s") . "] Informasi:\n";
         echo $PP . $claim['info'] . $CC . "\n";
         if ($claim['status'] == 1) {
-            echo $GR . "[" . date("H:i:s") . "] Yess Berhasil ! " . $claim ['message'] . $CC . "\n";
+            echo $GR . "[" . date("H:i:s") . "] Sungguh Mempesona ! " . $claim ['message'] . $CC . "\n";
         } elseif ($response['status'] == 0) {
-            echo $RD . "[" . date("H:i:s") . "] Gagal Goblok ! " . $claim['message'] . $CC . "\n";
+            echo $RD . "[" . date("H:i:s") . "] Kurang Tamvan ! " . $claim['message'] . $CC . "\n";
         }
     } else {
         exit("[" . date("H:i:s") . "] " . $RD . "Invalid cookies!" . $CC);
     }
-    echo "[" . date("H:i:s") . "] Mohon Tunggu 60 Detik Lagi Jadi Jangan Rakus Goblok...\n";
+    echo "[" . date("H:i:s") . "] Mohon Tunggu 60 Detik Lagi Sedang Memeriksa Ketamvananmu...\n";
     sleep(60);
 }

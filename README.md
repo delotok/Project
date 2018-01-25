@@ -1,5 +1,10 @@
 # Project
 Auto Claim BTC 
+On youtube Tutorial in Indonesian:
+https://youtu.be/tW7rxDzZxFQ
+
++++++++++++*+++*+++++++++++++++
+This tutorial in English..
 
 THE FIRST STEPS 
 + Create Account To Pick up BTC. 
